@@ -18,6 +18,23 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
+    config.module.rules.push(
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: [
+                  "./node_modules/@uswds/uswds/packages"
+                ],
+              },
+            },
+          }
+        ]
+      }
+    );
 
     return config;
   },
