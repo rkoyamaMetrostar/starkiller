@@ -6,7 +6,9 @@
     "start": "nx serve",
     "storybook": "nx run base:storybook",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "lint": "nx run base:lint --fix && nx run app:lint --fix",
+    "format": "nx format write"
   },
   "private": true,
   "dependencies": {
