@@ -2,5 +2,23 @@ import './uswds/uswds.scss';
 
 export * from './lib/accordion/accordion';
 export * from './lib/alert/alert';
-
-export * from './lib/base';
+export * from './lib/banner/banner';
+export * from './lib/button-group/button-group';
+export * from './lib/button/button';
+export * from './lib/card/card';
+export * from './lib/character-count/character-count';
+export * from './lib/checkbox/checkbox';
+export * from './lib/date-picker/date-picker';
+export * from './lib/dropdown/dropdown';
+export * from './lib/error-messages/error-messages';
+export * from './lib/form-group/form-group';
+export * from './lib/form/form';
+export * from './lib/icon/icon';
+export * from './lib/label/label';
+export * from './lib/modal/modal';
+export * from './lib/radio-button/radio-button';
+export * from './lib/table/table';
+export * from './lib/tag/tag';
+export * from './lib/text-area/text-area';
+export * from './lib/text-input/text-input';
+export * from './lib/tooltip/tooltip';
