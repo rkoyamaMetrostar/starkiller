@@ -10,7 +10,10 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@uswds/uswds/js/*": ["node_modules/@uswds/uswds/packages/*/src"]
+    }
   },
   "files": [],
   "include": [],
