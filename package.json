@@ -6,7 +6,7 @@
     "start": "nx serve",
     "storybook": "nx run base:storybook",
     "build": "nx build",
-    "test": "nx test",
+    "test": "nx run base:test && nx run app:test",
     "lint": "nx run base:lint --fix && nx run app:lint --fix",
     "format": "nx format write"
   },
@@ -44,6 +44,7 @@
     "@testing-library/dom": "^8.2.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/jest": "27.5.1",
     "@types/node": "16.11.7",
     "@types/react": "18.0.20",
