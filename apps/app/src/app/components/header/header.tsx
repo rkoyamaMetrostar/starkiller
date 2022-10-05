@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { APP_TITLE } from '../../constants';
 import logo from '../../../assets/img/logo.png';
-import { Banner, Icon, IconType } from '@starkiller/base';
+import { Icon, IconType } from '@starkiller/base';
 import styles from './header.module.scss';
 
 export function Header() {
@@ -58,6 +58,17 @@ export function Header() {
                   }`}
                 >
                   Home
+                </NavLink>
+              </li>
+              <li className="usa-nav__primary-item">
+                <NavLink
+                  id="login-link"
+                  to="/login"
+                  className={`usa-nav__link ${
+                    location.pathname === '/login' ? 'usa-current' : ''
+                  }`}
+                >
+                  Login
                 </NavLink>
               </li>
             </ul>

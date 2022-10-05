@@ -1,15 +1,37 @@
-/* eslint-disable-next-line */
-export interface HomeProps {}
+import { Alert, AlertType } from '@starkiller/base';
+import { Link } from 'react-router-dom';
+import { User } from '../../types/user';
 
-export function Home(props: HomeProps) {
-  const currentUser = 'Guest';
+/* eslint-disable-next-line */
+export interface HomeProps {
+  currentUser: User | undefined;
+}
+
+export function Home({ currentUser }: HomeProps) {
   return (
     <div className="grid-container">
-      <div className="grid-row">
-        <div className="grid-col">
-          <h1>Welcome {currentUser}</h1>
+      {currentUser ? (
+        <div className="grid-row">
+          <div className="grid-col">
+            <h1>
+              Welcome {currentUser.firstName + ' ' + currentUser.lastName}
+            </h1>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="grid-row">
+          <div className="grid-col">
+            <Alert
+              id="auth-alert"
+              type={AlertType.Warning}
+              heading="Login Required"
+            >
+              You are not currently logged in, please click{' '}
+              <Link to="/login">here</Link> to login.
+            </Alert>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
