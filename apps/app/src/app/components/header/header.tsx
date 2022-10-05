@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { APP_TITLE } from '../../constants';
 import logo from '../../../assets/img/logo.png';
 import { Icon, IconType } from '@starkiller/base';
-import styles from './header.module.scss';
+import './header.scss';
 
 export function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,7 +17,7 @@ export function Header() {
 
   useEffect(() => {
     const ref = document.body.classList;
-    showMenu ? ref.add(styles['no-scroll']) : ref.remove(styles['no-scroll']);
+    showMenu ? ref.add('no-scroll') : ref.remove('no-scroll');
   }, [showMenu]);
 
   useEffect(() => {
@@ -25,20 +25,13 @@ export function Header() {
   }, [location]);
 
   return (
-    <header
-      className={`${styles['header']} ${
-        showMenu ? styles['header-active'] : ''
-      }`}
-    >
+    <header className={`${'header'} ${showMenu ? 'header-active' : ''}`}>
       <div className="usa-nav-container">
         <div>
-          <Link to="/" className={styles['header-logo']}>
+          <Link to="/" className="header-logo">
             <img src={logo} alt={`${APP_TITLE} logo.`} />
           </Link>
-          <button
-            className={styles['header-menu-button']}
-            onClick={handleMenuClick}
-          >
+          <button className="header-menu-button" onClick={handleMenuClick}>
             <Icon
               id="menu-icon"
               type={!showMenu ? IconType.menu : IconType.close}
@@ -46,8 +39,8 @@ export function Header() {
             {!showMenu ? 'Menu' : 'Close'}
           </button>
         </div>
-        <div className={styles['header-content']}>
-          <nav className={styles['header-nav']}>
+        <div className="header-content">
+          <nav className="header-nav">
             <ul>
               <li className="usa-nav__primary-item">
                 <NavLink
