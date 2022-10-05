@@ -19,7 +19,10 @@
         "assets": ["apps/app/src/favicon.ico", "apps/app/src/assets"],
         "styles": ["apps/app/src/styles.scss"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "stylePreprocessorOptions": {
+          "includePaths": ["node_modules/@uswds/uswds/packages"]
+        }
       },
       "configurations": {
         "development": {

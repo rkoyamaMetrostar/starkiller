@@ -1,0 +1,155 @@
+$nav-item-color: #005ea2;
+$search-color: #dfe1e2;
+
+$breakpoint-md: 64rem;
+$breakpoint-sm: 40rem;
+
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin padding() {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  background-color: #f0f0f0;
+
+  @include media($breakpoint-md) {
+    &.header-active {
+      height: 100vh;
+
+      .header-search {
+        padding-top: 1rem;
+        border-top: 3px solid $search-color;
+
+        form {
+          display: none;
+        }
+
+        a {
+          display: block;
+        }
+      }
+
+      .header-nav {
+        display: block;
+        padding-top: 1rem;
+        border-top: 3px solid $search-color;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  & > div:not(#banner) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: none;
+    }
+
+    @include media($breakpoint-md) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+
+      div:first-of-type {
+        display: flex;
+        justify-content: space-between;
+        @include padding();
+      }
+    }
+  }
+
+  a {
+    color: $nav-item-color;
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-decoration: none;
+
+    &:visited {
+      color: $nav-item-color;
+    }
+
+    &:hover {
+      color: #1a4480;
+    }
+  }
+
+  .header-logo {
+    display: flex;
+
+    img {
+      width: 80px;
+    }
+
+    @include media($breakpoint-md) {
+      width: fit-content;
+    }
+  }
+
+  .header-menu-button {
+    display: none;
+
+    @include media($breakpoint-md) {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: $nav-item-color;
+      border: none;
+      background-color: transparent;
+      font-weight: 700;
+
+      svg {
+        color: $nav-item-color;
+      }
+    }
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .header-nav {
+    ul {
+      margin: 0;
+      display: flex;
+      list-style-type: none;
+      padding-left: 0;
+      justify-content: end;
+      gap: 1rem;
+    }
+
+    @include media($breakpoint-md) {
+      @include padding();
+      display: none;
+
+      ul {
+        background-color: white;
+        flex-direction: column;
+        overflow: scroll;
+        justify-content: start;
+      }
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
