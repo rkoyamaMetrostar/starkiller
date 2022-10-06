@@ -1,3 +1,13 @@
+html {
+  font-family: monospace !important;
+  font-size: 110% !important;
+}
 .usa-section {
   padding-top: 1em !important;
+}
+
+.grid-container {
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+  max-width: unset !important;
 }

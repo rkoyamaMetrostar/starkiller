@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { APP_TITLE } from '../../constants';
-import logo from '../../../assets/img/logo.png';
+import logo from '../../../assets/img/logo_starkiller.png';
 import { Icon, IconType } from '@starkiller/base';
 import './header.scss';
 

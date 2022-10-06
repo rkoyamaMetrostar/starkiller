@@ -13,9 +13,7 @@ export function Home({ currentUser }: HomeProps) {
       {currentUser ? (
         <div className="grid-row">
           <div className="grid-col">
-            <h1>
-              Welcome {currentUser.firstName + ' ' + currentUser.lastName}
-            </h1>
+            <h1>Welcome to the Dark Side!</h1>
           </div>
         </div>
       ) : (

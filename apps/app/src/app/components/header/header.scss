@@ -1,4 +1,4 @@
-$nav-item-color: #000;
+$nav-item-color: #fff;
 $search-color: #dfe1e2;
 
 $breakpoint-md: 64rem;
@@ -17,7 +17,8 @@ $breakpoint-sm: 40rem;
 
 .header {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
-  background-color: #f0f0f0;
+  background-color: #252f3e;
+  color: #fff;
 
   @include media($breakpoint-md) {
     &.header-active {
@@ -85,7 +86,7 @@ $breakpoint-sm: 40rem;
     }
 
     &:hover {
-      color: #1a4480;
+      color: #d90000;
     }
   }
 
@@ -93,7 +94,7 @@ $breakpoint-sm: 40rem;
     display: flex;
 
     img {
-      width: 80px;
+      width: 300px;
     }
 
     @include media($breakpoint-md) {
@@ -141,12 +142,17 @@ $breakpoint-sm: 40rem;
       display: none;
 
       ul {
-        background-color: white;
         flex-direction: column;
         overflow: scroll;
         justify-content: start;
       }
     }
+  }
+
+  .usa-nav-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: unset;
   }
 }
 
