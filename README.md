@@ -30,5 +30,5 @@ The following are a list of items that can be completed in order to further buil
 
 - Use Starkiller stories as code examples for component use.
 - All standard components should come from the Starkiller library.
-- Any that are not currently available should be added to the library from USWDS.
-- Don't forget to add unit tests for any new code
+- Any standard components that are not currently available should be added to the library from USWDS.
+- Don't forget to add unit tests for any new code.
