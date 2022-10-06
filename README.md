@@ -15,7 +15,7 @@ Note: the sample application is intended to provide a starting point for buildin
 - `npm run test` to run unit tests on the library and sample application.
 - `npm run lint` to run linting checks on the library and sample application.
 
-## What's next
+## Next Steps
 
 The following are a list of items that can be completed in order to further build out this application and learn along the way:
 
