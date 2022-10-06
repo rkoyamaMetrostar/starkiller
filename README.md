@@ -20,8 +20,15 @@ Note: the sample application is intended to provide a starting point for buildin
 The following are a list of items that can be completed in order to further build out this application and learn along the way:
 
 - [ ] Add Basic Footer to App
-- [ ] Add Characters Dashboard Page (Page, Route, USWDS Table, Top Navigation)
-- [ ] Add Character Details Page (Page, Route, Details View)
+- [ ] Add Characters Dashboard Page (Page, Route, Data Table, Top Navigation)
+- [ ] Add Character Details Page (Page, Route, Data View)
 - [ ] Add Login Form (should allow any username and password combo, if not provided, provide form validation messaging)
 - [ ] Add Search Functionality to Dashboard Page (note: this will require the addition of a new component to the library)
 - [ ] Replace Prop Drilling state management with Redux
+
+### Additional Notes
+
+- Use Starkiller stories as code examples for component use.
+- All standard components should come from the Starkiller library.
+- Any that are not currently available should be added to the library from USWDS.
+- Don't forget to add unit tests for any new code
