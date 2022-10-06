@@ -14,3 +14,14 @@ Note: the sample application is intended to provide a starting point for buildin
 
 - `npm run test` to run unit tests on the library and sample application.
 - `npm run lint` to run linting checks on the library and sample application.
+
+## What's next
+
+The following are a list of items that can be completed in order to further build out this application and learn along the way:
+
+- [ ] Add Basic Footer to App
+- [ ] Add Characters Dashboard Page (Page, Route, USWDS Table, Top Navigation)
+- [ ] Add Character Details Page (Page, Route, Details View)
+- [ ] Add Login Form (should allow any username and password combo, if not provided, provide form validation messaging)
+- [ ] Add Search Functionality to Dashboard Page
+- [ ] Replace Prop Drilling state management with Redux
