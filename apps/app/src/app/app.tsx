@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
 import { Home } from './pages/home/home';
 import { Login } from './pages/login/login';
 import { User } from './types/user';
@@ -21,6 +22,7 @@ export function App() {
           />
         </Routes>
       </section>
+      <Footer />
     </div>
   );
 }
